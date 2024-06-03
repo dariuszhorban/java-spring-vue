@@ -1,16 +1,13 @@
 <template>
   <ChartRate />
-  <!-- <ChartWrapper /> -->
 </template>
 
 <script>
-// import ChartWrapper from './components/ChartWrapper.vue'
 import ChartRate from './components/ChartRate.vue'
 
 export default {
   name: 'App',
   components: {
-    // ChartWrapper,
     ChartRate
   }
 }

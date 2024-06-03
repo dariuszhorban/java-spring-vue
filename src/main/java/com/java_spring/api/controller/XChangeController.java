@@ -1,6 +1,6 @@
-package com.example.demo_java.controller;
+package com.java_spring.api.controller;
 
-import com.example.demo_java.service.XChangeAPIService;
+import com.java_spring.api.service.XChangeAPIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,18 +11,13 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api")
-public class ExchangeRateController {
+public class XChangeController {
 
     private final XChangeAPIService xChangeAPIService;
 
     @Autowired
-    public ExchangeRateController(XChangeAPIService xChangeAPIService) {
+    public XChangeController(XChangeAPIService xChangeAPIService) {
         this.xChangeAPIService = xChangeAPIService;
-    }
-
-    @GetMapping("/exchange-rates")
-    public String getExchangeRates() throws IOException {
-        return xChangeAPIService.fetchExchangeRates();
     }
 
     @GetMapping("/currency-pair")
